@@ -10,10 +10,10 @@ const NutritionForm = () => {
 
   const [data, setDate] = useState({
     itemName: "",
-    calories: 0,
-    protein: 0,
-    carbs: 0,
-    fat: 0,
+    calories: "",
+    protein: "",
+    carbs: "",
+    fat: "",
   });
 
   const handleChange = (e) => {
@@ -56,10 +56,10 @@ const NutritionForm = () => {
     setDate(
       {
         itemName: "",
-        calories: 0,
-        protein: 0,
-        carbs: 0,
-        fat: 0,
+    calories: "",
+    protein: "",
+    carbs: "",
+    fat: "",
       }
     )
   
@@ -94,7 +94,7 @@ const NutritionForm = () => {
                 name="protein"
                 value={editingItem.protein}
                 onChange={handleChange}
-                placeholder="protein"
+                placeholder="Protein (g)"
                 className="md:w-1/2 w-full border border-zinc-700 p-2"
               />
               <input
@@ -102,7 +102,7 @@ const NutritionForm = () => {
                 name="carbs"
                 value={editingItem.carbs}
                 onChange={handleChange}
-                placeholder="Carbs"
+                placeholder="Carbs (g)"
                 className="md:w-1/2 w-full border border-zinc-700 p-2"
               />
             </div>
@@ -112,7 +112,7 @@ const NutritionForm = () => {
                 name="fat"
                 value={editingItem.fat}
                 onChange={handleChange}
-                placeholder="Fat"
+                placeholder="Fat  (g)"
                 className="md:w-1/2 w-full border border-zinc-700 p-2"
               />
             </div>
@@ -125,7 +125,7 @@ const NutritionForm = () => {
               </button>
               <button
                 onClick={handleCancel}
-                className="dd:w-1/2 w-full bg-red-500 p-2 rounded cursor-pointer hover:bg-red-600 ">
+                className="md:w-1/2 w-full bg-red-500 p-2 rounded cursor-pointer hover:bg-red-600 ">
                 Cancel
               </button>
             </div>
@@ -158,7 +158,7 @@ const NutritionForm = () => {
                   name="protein"
                   value={data.protein}
                   onChange={handleChange}
-                  placeholder="protein"
+                  placeholder="Protein (g)"
                   className="md:w-1/2 w-full border  border-zinc-700 p-2"
                 />
                 <input
@@ -166,7 +166,7 @@ const NutritionForm = () => {
                   name="carbs"
                   value={data.carbs}
                   onChange={handleChange}
-                  placeholder="Carbs"
+                  placeholder="Carbs (g)"
                   className="md:w-1/2 w-full border border-zinc-700 p-2"
                 />
               </div>
@@ -176,7 +176,7 @@ const NutritionForm = () => {
                   name="fat"
                   value={data.fat}
                   onChange={handleChange}
-                  placeholder="Fat"
+                  placeholder="Fat (g)"
                   className="md:w-1/2 w-full  border border-zinc-700 p-2"
                 />
               </div>
