@@ -1,8 +1,54 @@
-# React + Vite
+# Nutrition Meter 🍎📊
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React-based web application designed to help users track and analyze their daily nutritional intake, fostering healthier eating habits.
 
-Currently, two official plugins are available:
+<!-- ![GitHub stars](https://img.shields.io/github/stars/shiinedev/Nutrition-Meter?style=social)
+![GitHub forks](https://img.shields.io/github/forks/shiinedev/Nutrition-Meter?style=social)
+![GitHub issues](https://img.shields.io/github/issues/shiinedev/Nutrition-Meter)
+![License](https://img.shields.io/github/license/shiinedev/Nutrition-Meter) -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## 🌟 Features
+
+- **Food Logging** 📝  
+  Easily record your daily meals and snacks with detailed nutritional information.
+- **Nutrient Breakdown** 📊  
+  Get comprehensive analysis of calories, macronutrients, and micronutrients.
+- **Personalized Goals** 🎯  
+  Set and monitor custom dietary goals to match your health objectives.
+- **Responsive Design** 📱  
+  Optimized for seamless use on both desktop and mobile devices.
+
+
+---
+
+## 🛠 Tech Stack
+
+- **React.js** ⚛️  
+  For building dynamic user interfaces.
+- **Vite** 🚀  
+  For fast development and optimized builds.
+- **Tailwindcss** 🎨  
+  For a clean, modern look and responsive design.
+
+## 📦 Installation
+
+1. **Clone the repository:**
+   ```bash
+    git clone https://github.com/shiinedev/Nutrition-Meter.git
+
+2. **Navigate to the project directory:**
+    ```bash 
+    cd Nutrition-Meter
+3. **Install dependencies:**
+    ```bash 
+    npm install
+
+## 🚀 Usage
+    npm run dev
+
+
+
+
+
