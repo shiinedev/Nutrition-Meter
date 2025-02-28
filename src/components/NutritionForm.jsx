@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
-import { NutritionContext } from "../Nutritioncontext";
+import { NutritionContext } from "../Context";
 import toast from "react-hot-toast";
 
 const NutritionForm = () => {
 
-  const { addItem, state, editingItem, isEdit, setEditingItem, setIsEdit, updateItem } = useContext(NutritionContext);
+  const { addItem, editingItem, isEdit, setEditingItem, setIsEdit, updateItem } = useContext(NutritionContext);
 
 
 
@@ -31,10 +31,10 @@ const NutritionForm = () => {
       addItem(data);
      
       clearInputs();
-      toast.success("Added Nutrition successFully!");
+      toast.success("Added Item successfully");
     } else {
 
-      toast.error("please fill all inputs")
+      toast.error("please fill all inputs!")
     }
   };
 
@@ -42,7 +42,7 @@ const NutritionForm = () => {
 
     updateItem(editingItem.id);
     setIsEdit(false);
-    toast.success("item update successfully");
+    toast.success(" Update Item successfully");
    
 
   }
@@ -62,21 +62,22 @@ const NutritionForm = () => {
         fat: 0,
       }
     )
+  
   }
   return (
-    <div className="w-4xl mx-auto bg-zinc-800 rounded shadow-lg p-4 mt-4">
+    <div className="lg:w-4xl w-full mx-auto bg-zinc-800 rounded shadow-lg p-4 mt-4">
       {
         isEdit ? (
           <>
             <h1 className="text-2xl font-semibold text-center">Edit Nutrition </h1>
-            <div className="w-full flex space-x-4 mt-4">
+            <div className="w-full flex flex-col md:flex-row gap-3 mt-4">
               <input
                 type="text"
                 name="itemName"
                 value={editingItem.itemName}
                 onChange={handleChange}
                 placeholder="Item Name"
-                className="w-1/2 border border-zinc-700 p-2"
+                className="md:w-1/2 w-full border border-zinc-700 p-2"
               />
               <input
                 type="Number"
@@ -84,17 +85,17 @@ const NutritionForm = () => {
                 value={editingItem.calories}
                 onChange={handleChange}
                 placeholder="calories"
-                className="w-1/2 border border-zinc-700 p-2"
+                className="md:w-1/2 w-full border border-zinc-700 p-2"
               />
             </div>
-            <div className="w-full flex space-x-4 mt-4">
+            <div className="w-full flex flex-col md:flex-row gap-3 mt-4">
               <input
                 type="Number"
                 name="protein"
                 value={editingItem.protein}
                 onChange={handleChange}
                 placeholder="protein"
-                className="w-1/2 border border-zinc-700 p-2"
+                className="md:w-1/2 w-full border border-zinc-700 p-2"
               />
               <input
                 type="Number"
@@ -102,29 +103,29 @@ const NutritionForm = () => {
                 value={editingItem.carbs}
                 onChange={handleChange}
                 placeholder="Carbs"
-                className="w-1/2 border border-zinc-700 p-2"
+                className="md:w-1/2 w-full border border-zinc-700 p-2"
               />
             </div>
-            <div className="w-full flex space-x-4 mt-4">
+            <div className="w-full flex flex-col md:flex-row gap-3 mt-4">
               <input
                 type="Number"
                 name="fat"
                 value={editingItem.fat}
                 onChange={handleChange}
                 placeholder="Fat"
-                className="w-1/2 border border-zinc-700 p-2"
+                className="md:w-1/2 w-full border border-zinc-700 p-2"
               />
             </div>
-            <div className="w-full flex space-x-4 mt-4">
+            <div className="w-full flex flex-col md:flex-row gap-3 mt-4">
               <button
                 onClick={handleUpdate}
-                className="w-1/2 bg-green-500 p-2 rounded cursor-pointer hover:bg-green-600  "
+                className="md:w-1/2 w-full bg-green-500 p-2 rounded cursor-pointer hover:bg-green-600  "
               >
                 Update
               </button>
               <button
                 onClick={handleCancel}
-                className="w-1/2 bg-red-500 p-2 rounded cursor-pointer hover:bg-red-600 ">
+                className="dd:w-1/2 w-full bg-red-500 p-2 rounded cursor-pointer hover:bg-red-600 ">
                 Cancel
               </button>
             </div>
@@ -133,14 +134,14 @@ const NutritionForm = () => {
           (
             <>
               <h1 className="text-2xl font-semibold text-center"> Add Nutrition </h1>
-              <div className="w-full flex space-x-4 mt-4">
+              <div className="w-full flex flex-col md:flex-row  gap-3 mt-4">
                 <input
                   type="text"
                   name="itemName"
                   value={data.itemName}
                   onChange={handleChange}
                   placeholder="Item Name"
-                  className="w-1/2 border border-zinc-700 p-2"
+                  className=" md:w-1/2 w-full border border-zinc-700 p-2"
                 />
                 <input
                   type="Number"
@@ -148,17 +149,17 @@ const NutritionForm = () => {
                   value={data.calories}
                   onChange={handleChange}
                   placeholder="calories"
-                  className="w-1/2 border border-zinc-700 p-2"
+                  className=" md:w-1/2 w-full border border-zinc-700 p-2"
                 />
               </div>
-              <div className="w-full flex space-x-4 mt-4">
+              <div className="w-full flex flex-col md:flex-row gap-3 mt-4">
                 <input
                   type="Number"
                   name="protein"
                   value={data.protein}
                   onChange={handleChange}
                   placeholder="protein"
-                  className="w-1/2 border border-zinc-700 p-2"
+                  className="md:w-1/2 w-full border  border-zinc-700 p-2"
                 />
                 <input
                   type="Number"
@@ -166,29 +167,29 @@ const NutritionForm = () => {
                   value={data.carbs}
                   onChange={handleChange}
                   placeholder="Carbs"
-                  className="w-1/2 border border-zinc-700 p-2"
+                  className="md:w-1/2 w-full border border-zinc-700 p-2"
                 />
               </div>
-              <div className="w-full flex space-x-4 mt-4">
+              <div className="w-full flex flex-col md:flex-row gap-3 mt-4">
                 <input
                   type="Number"
                   name="fat"
                   value={data.fat}
                   onChange={handleChange}
                   placeholder="Fat"
-                  className="w-1/2 border border-zinc-700 p-2"
+                  className="md:w-1/2 w-full  border border-zinc-700 p-2"
                 />
               </div>
-              <div className="w-full flex space-x-4 mt-4">
+              <div className="w-full flex flex-col md:flex-row gap-3 mt-4">
                 <button
                   onClick={handleAdd}
-                  className="w-1/2 bg-green-500 p-2 rounded cursor-pointer hover:bg-green-600  "
+                  className="md:w-1/2 w-full  bg-green-500 p-2 rounded cursor-pointer hover:bg-green-600  "
                 >
                   Add Item
                 </button>
                 <button
                   onClick={clearInputs}
-                  className="w-1/2 bg-red-500 p-2 rounded cursor-pointer hover:bg-red-600 ">
+                  className="md:w-1/2 w-full  bg-red-500 p-2 rounded cursor-pointer hover:bg-red-600 ">
                   Clear
                 </button>
               </div>

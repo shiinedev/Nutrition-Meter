@@ -20,8 +20,7 @@ const NutritionProvider = ({ children }) => {
           });
     }else{
         items.map((item) => {
-            console.log(item);
-      
+          
             totalCalories += Number(item.calories * item.quantity);
             totalProtein += Number(item.protein * item.quantity);
             totalCarbs += Number(item.carbs * item.quantity);
